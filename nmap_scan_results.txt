@@ -1,0 +1,113 @@
+NMAP NETWORK SCANNING RESULTS
+=============================
+
+Target IP: 192.168.1.19
+
+1. BASIC SCAN
+-------------
+
+Command:
+nmap 192.168.1.19
+
+Result:
+Host is up.
+
+Open Ports:
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+
+
+2. SERVICE VERSION SCAN
+-----------------------
+
+Command:
+nmap -sV 192.168.1.19
+
+Result:
+
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Microsoft Windows SMB
+
+Service Info:
+OS: Windows
+
+
+3. OS DETECTION SCAN
+--------------------
+
+Command:
+nmap -O 192.168.1.19
+
+Result:
+
+Device type: general purpose
+Running: Microsoft Windows 11
+OS details: Microsoft Windows 11 24H2 - 25H2
+Network Distance: 0 hops
+
+
+4. OPEN PORTS AND SERVICES
+--------------------------
+
+Port 135 - MSRPC
+Service: Microsoft RPC
+
+Purpose:
+MSRPC is used by Windows applications and services to communicate
+with each other across a network.
+
+Security Risk:
+If unnecessarily exposed, RPC services can increase the attack
+surface of a Windows system. They should be protected by appropriate
+firewall rules.
+
+
+Port 139 - NetBIOS-SSN
+Service: Microsoft NetBIOS Session Service
+
+Purpose:
+Used by Windows systems for network communication and legacy
+file/printer sharing.
+
+Security Risk:
+If exposed unnecessarily, it can reveal network information and
+increase the attack surface.
+
+
+Port 445 - Microsoft-DS / SMB
+Service: Microsoft SMB
+
+Purpose:
+SMB is used by Windows for file and printer sharing and other
+network services.
+
+Security Risk:
+SMB should be properly secured because vulnerable or improperly
+configured SMB services can create security risks.
+
+
+5. SUMMARY
+----------
+
+The scan identified three open TCP ports on 192.168.1.19:
+
+135/tcp - MSRPC
+139/tcp - NetBIOS-SSN
+445/tcp - Microsoft-DS / SMB
+
+OS detection identified the target as Microsoft Windows 11.
+
+
+6. ETHICAL USE
+--------------
+
+Nmap scanning was performed only on an authorized/local system
+for educational purposes.
+
+Nmap should only be used on systems that you own or have explicit
+permission to scan.
+
+Scanning external, production, or unauthorized systems is not
+permitted for this project.
