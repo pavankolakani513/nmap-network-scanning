@@ -39,3 +39,40 @@ On Debian/Ubuntu/Kali Linux, Nmap can be installed with:
 ```bash
 sudo apt update
 sudo apt install nmap
+
+## Scans Performed
+
+### 1. Basic Scan
+
+Command:
+
+```bash
+nmap 192.168.1.19
+
+That is fine **if `192.168.1.19` is your own computer or a machine you have permission to scan**.
+
+You can continue the README below it with something like:
+
+```markdown
+## Scan Results
+
+The scan identified the following open ports:
+
+- 135/tcp - MSRPC
+- 139/tcp - NetBIOS-SSN
+- 445/tcp - Microsoft-DS / SMB
+
+The target was identified as Microsoft Windows 11.
+
+## Security Observations
+
+- Port 135 is associated with Microsoft RPC services.
+- Port 139 is associated with NetBIOS Session Service.
+- Port 445 is associated with SMB file and printer sharing.
+- Unnecessary exposed services should be restricted using firewall rules.
+
+## Ethical Use
+
+Nmap scanning was performed only on an authorized/local system for educational purposes.
+
+Nmap should only be used on systems that you own or have explicit permission to scan.
